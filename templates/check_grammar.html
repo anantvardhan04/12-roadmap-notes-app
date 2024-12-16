@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Checker</title>
+</head>
+<body>
+    {% if issues %}
+        <h1>Grammar Issues</h1>
+        <ol>
+            {% for issue in issues %}
+            <li>
+                <p>{{ issue.sentence|replace('-', '') }}</p>
+                <p> <b>Issue: </b>{{ issue.message }}</p>
+            </li>
+
+        {% endfor %}
+        </ol>
+
+    {% else %}
+        <h1>No Grammar Issues</h1>
+    {% endif %}
+
+</body>
+</html>
+
+
+
+

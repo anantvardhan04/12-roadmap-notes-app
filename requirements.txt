@@ -1,0 +1,4 @@
+flask
+markdown
+flask_wtf
+language-tool-python
